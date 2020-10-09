@@ -1,0 +1,44 @@
+body {
+  font: 1em/1.5 "Roboto", sans-serif;
+  color: #4c4c4c;
+  background-image: url(https://api.nasa.gov/planetary/apod?api_key=ubTNhbfztJyZsy5OOgfH1W37HeqXpIG7CxbT6oko);
+}
+
+.title {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+.searchbar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Carter One";
+}
+.container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
+
+  .image-item:nth-child(5n) {
+    grid-column-end: span 2;
+  }
+
+  img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
